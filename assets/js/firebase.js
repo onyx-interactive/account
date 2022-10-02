@@ -18,6 +18,7 @@ const database = firebase.database()
 // Set up our register function
 function register () {
   // Get all our input fields
+  username = document.getElementById('username').value
   email = document.getElementById('email').value
   password = document.getElementById('password').value
   full_name = document.getElementById('full_name').value
@@ -46,6 +47,7 @@ function register () {
 
     // Create User data
     var user_data = {
+      $uid : username,
       email : email,
       full_name : full_name,
       favourite_song : favourite_song,
