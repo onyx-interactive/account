@@ -24,7 +24,10 @@ function register () {
   full_name = document.getElementById('full_name').value
   favourite_song = document.getElementById('favourite_song').value
   milk_before_cereal = document.getElementById('milk_before_cereal').value
-
+  var user = auth.currentUser
+  
+  user.uid : username
+  
   // Validate input fields
   if (validate_email(email) == false || validate_password(password) == false) {
     alert('Email or Password is Outta Line!!')
@@ -47,7 +50,6 @@ function register () {
 
     // Create User data
     var user_data = {
-      $uid : username,
       email : email,
       full_name : full_name,
       favourite_song : favourite_song,
